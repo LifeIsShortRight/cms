@@ -1,34 +1,16 @@
 <!--  -->
 <template>
-  <div>
-    <el-container v-if="$route.path !== '/login'" id="app">
-      <el-aside width="auto"><Aside /></el-aside>
-      <el-container>
-        <el-header><Header /></el-header>
-        <Tags />
-        <el-main><Main /></el-main>
-      </el-container>
-    </el-container>
-    <router-view v-else></router-view>
-  </div>
+  <div class="Page1">Page1</div>
 </template>
 
 <script>
 //这里可以导入其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
 //例如：import 《组件名称》 from '《组件路径》';
-import Aside from 'views/aside/Aside'
-import Header from 'views/header/Header'
-import Main from 'views/main/Main'
-import Tags from 'components/this/Tags'
+
 export default {
   //import引入的组件需要注入到对象中才能使用
-  name: 'app',
-  components: {
-    Aside,
-    Header,
-    Main,
-    Tags
-  },
+  name: 'Page1',
+  components: {},
   props: {},
   data() {
     //这里存放数据
@@ -54,17 +36,5 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-#app {
-  height: 100vh;
-  .el-container {
-    background-color: #eee;
-    .el-header {
-      background-color: gray;
-    }
-  }
-}
-.el-menu-vertical-demo:not(.el-menu--collapse) {
-  width: 200px;
-  min-height: 400px;
-}
+/* @import url(); 引入公共css类'*/
 </style>
